@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.email       = ["info@mr.si"]
   s.homepage    = "https://github.com/mrfoto/swipebox"
   s.summary     = "Gem for Swipebox by @brutaldesign"
-  s.description = "Adds Swipebox http://brutaldesign.github.io/swipebox/ to Rails app."
+  s.description = "Adds Swipebox http://brutaldesign.github.io/swipebox/ to Rails asset pipeline."
 
   s.files = Dir["{lib,vendor}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
   s.test_files = Dir["test/**/*"]

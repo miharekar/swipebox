@@ -6,7 +6,7 @@
 
 Add this line to your application's Gemfile:
 
-    gem "swipebox", github: 'mrfoto/swipebox'
+    gem 'swipebox'
 
 ## Usage
 
