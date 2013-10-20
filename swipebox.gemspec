@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.version     = Swipebox::VERSION
   s.authors     = ["Miha Rekar"]
   s.email       = ["info@mr.si"]
-  s.homepage    = "http://mr.si/"
+  s.homepage    = "https://github.com/mrfoto/swipebox"
   s.summary     = "Gem for Swipebox by @brutaldesign"
   s.description = "Adds Swipebox http://brutaldesign.github.io/swipebox/ to Rails app."
 
