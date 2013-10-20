@@ -30,7 +30,7 @@ html.swipebox {
 }
 
 #swipebox-slider .slide {
-  background: url('loader.gif') no-repeat center center;
+  background: asset-url('loader.gif') no-repeat center center;
   height: 100%;
   width: 100%;
   line-height: 1px;
@@ -118,7 +118,7 @@ html.swipebox {
 
 #swipebox-action #swipebox-prev, #swipebox-action #swipebox-next,
 #swipebox-action #swipebox-close {
-  background-image: url('icons.png');
+  background-image: asset-url('icons.png');
   background-repeat: no-repeat;
   border: none!important;
   text-decoration: none!important;
@@ -128,7 +128,7 @@ html.swipebox {
   height: 50px;
   top: 0;
   &.svg {
-    background-image: url('icons.svg');
+    background-image: asset-url('icons.svg');
   }
 }
 
