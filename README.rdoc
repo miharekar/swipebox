@@ -1,3 +1,23 @@
-= Swipebox
+# Swipebox for Rails
 
-This project rocks and uses MIT-LICENSE.
+[swipebox](http://brutaldesign.github.io/swipebox/) for the Rails asset pipeline
+
+## Installation
+
+Add this line to your application's Gemfile:
+
+    gem "swipebox", github: 'mrfoto/swipebox'
+
+## Usage
+
+In your CSS manifest file:
+
+    *= require swipebox
+
+In your JavaScript manifest file:
+
+    //= require swipebox
+
+## License
+
+[The MIT License](MIT-LICENSE)

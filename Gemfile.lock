@@ -4,7 +4,7 @@ PATH
     swipebox (0.0.1)
       rails (~> 4.0.0)
       railties (~> 4.0)
-      sass-rails
+      sass-rails (~> 4.0)
 
 GEM
   remote: https://rubygems.org/
