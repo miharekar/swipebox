@@ -21,7 +21,8 @@
 			videoMaxWidth : 1140,
 			vimeoColor : 'CCCCCC',
 			beforeOpen: null,
-		      	afterClose: null
+		  afterClose: null,
+		  showCount: false
 		},
 
 		plugin = this,
@@ -424,7 +425,9 @@
 					$('#swipebox-next').addClass('disabled');
 				}
 
-				$('#swipebox-count').text((index+1) + '/' + elements.length)
+				if (plugin.settings.showCount) {
+					$('#swipebox-count').text((index+1) + '/' + elements.length)
+				};
 			},
 
 			openSlide : function (index){
