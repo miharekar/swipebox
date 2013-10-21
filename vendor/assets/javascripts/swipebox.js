@@ -6,7 +6,7 @@
 @version     1.2.1*
 @license      MIT License
 
-*svg class mod
+*svg class mod and showCount feature added by @mrfoto
 
 ----------------------------------------------------------------------------------------------*/
 
