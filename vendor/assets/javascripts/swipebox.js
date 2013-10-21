@@ -20,9 +20,9 @@
 			hideBarsDelay : 3000,
 			videoMaxWidth : 1140,
 			vimeoColor : 'CCCCCC',
+			showCount: false,
 			beforeOpen: null,
-		  afterClose: null,
-		  showCount: false
+		  	afterClose: null
 		},
 
 		plugin = this,
