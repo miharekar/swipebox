@@ -29,17 +29,36 @@ In your JavaScript manifest file:
 //= require swipebox
 ```
 
-## Swipebox usage
+Use a specific class for your links and use the title attribute as caption.
 
-Look at the original [Swipebox repo](https://github.com/brutaldesign/swipebox#usage).
-
-I have modified JavaScript a bit:
-- svg image (if supported) now comes with a class change and not with a hardcoded filename change
-- option to show slide count added via `showCount`. Example:
-
-```js
-$('.swipebox').swipebox({ showCount: true })
+```html
+<a href="big/image.jpg" class="swipebox" title="My Caption">
 ```
+
+Bind the swipebox behaviour on every link with the "swipebox" class.
+
+```javascript
+$(".swipebox").swipebox();
+```
+
+###Options
+
+```javascript
+useCSS : true, // false will force the use of jQuery for animations
+initialIndexOnArray: 0, // which image index to init when a array is passed
+hideBarsDelay : 3000, // 0 to always show caption and action bar
+videoMaxWidth : 1140, // videos max width
+vimeoColor : 'CCCCCC', // default color for vimeo embed
+showCount: false, // when true shows a simple slide counter (x/total)
+beforeOpen: function(){} , // called before opening
+afterClose: function(){} // called after closing
+```
+
+Look at the original [Swipebox repo](https://github.com/brutaldesign/swipebox#usage) for more.
+
+I have modified source a bit from the 1.2.1 version:
+- svg image (if supported) now comes with a class change and not with a hardcoded filename change
+- option to show slide counter added via `showCount`
 
 ## License
 
