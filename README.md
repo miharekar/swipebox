@@ -2,6 +2,11 @@
 
 [swipebox](http://brutaldesign.github.io/swipebox/) for the Rails asset pipeline
 
+[![Gem Version](https://badge.fury.io/rb/swipebox.png)](http://badge.fury.io/rb/swipebox)
+[![Build Status](https://travis-ci.org/mrfoto/swipebox.png?branch=master)](https://travis-ci.org/mrfoto/swipebox)
+[![Code Climate](https://codeclimate.com/github/mrfoto/swipebox.png)](https://codeclimate.com/github/mrfoto/swipebox)
+[![Dependency Status](https://gemnasium.com/mrfoto/swipebox.png)](https://gemnasium.com/mrfoto/swipebox)
+
 ## Installation
 
 Add this line to your application's Gemfile:
