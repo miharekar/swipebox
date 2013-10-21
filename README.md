@@ -29,8 +29,8 @@ In your JavaScript manifest file:
 Look at the original [Swipebox repo](https://github.com/brutaldesign/swipebox#usage).
 
 I have modified JavaScript a bit:
-- svg image now comes with class and not with hardcoded filename change
-- I've added an option to show slide count via `showCount` option. Example:
+- svg image (if supported) now comes with a class change and not with a hardcoded filename change
+- option to show slide count added via `showCount`. Example:
 
 ```js
 $('.swipebox').swipebox({ showCount: true })
