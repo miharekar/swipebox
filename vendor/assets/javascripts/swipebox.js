@@ -3,10 +3,8 @@
 @author       Constantin Saguin - @brutaldesign
 @link            http://csag.co
 @github        http://github.com/brutaldesign/swipebox
-@version     1.2.1*
+@version     1.2.1
 @license      MIT License
-
-*svg class mod and showCount feature added by @mrfoto
 
 ----------------------------------------------------------------------------------------------*/
 
@@ -22,7 +20,7 @@
 			vimeoColor : 'CCCCCC',
 			showCount: false,
 			beforeOpen: null,
-		  	afterClose: null
+			afterClose: null
 		},
 
 		plugin = this,
@@ -152,7 +150,7 @@
 
 
 				if(supportSVG){
-					$('#swipebox-action #swipebox-prev,#swipebox-action #swipebox-next,#swipebox-action #swipebox-close').addClass('svg')
+					$('#swipebox-action #swipebox-prev,#swipebox-action #swipebox-next,#swipebox-action #swipebox-close').addClass('svg');
 				}
 
 				$.each( elements,  function(){
@@ -241,37 +239,37 @@
 
 						$(this).addClass('touching');
 
-		  				endCoords = e.originalEvent.targetTouches[0];
-		    				startCoords.pageX = e.originalEvent.targetTouches[0].pageX;
+							endCoords = e.originalEvent.targetTouches[0];
+								startCoords.pageX = e.originalEvent.targetTouches[0].pageX;
 
 						$('.touching').bind('touchmove',function(e){
 							e.preventDefault();
 							e.stopPropagation();
-		    					endCoords = e.originalEvent.targetTouches[0];
+									endCoords = e.originalEvent.targetTouches[0];
 
 						});
 
-			           			return false;
+											return false;
 
-	           			}).bind('touchend',function(e){
-	           				e.preventDefault();
+									}).bind('touchend',function(e){
+										e.preventDefault();
 					e.stopPropagation();
 
-   					distance = endCoords.pageX - startCoords.pageX;
+						distance = endCoords.pageX - startCoords.pageX;
 
-	       				if( distance >= swipMinDistance ){
+								if( distance >= swipMinDistance ){
 
-	       					// swipeLeft
-	       					$this.getPrev();
+									// swipeLeft
+									$this.getPrev();
 
-	       				}else if( distance <= - swipMinDistance ){
+								}else if( distance <= - swipMinDistance ){
 
-	       					// swipeRight
-	       					$this.getNext();
+									// swipeRight
+									$this.getNext();
 
-	       				}else{
-	       					// tap
-	       					if(!bars.hasClass('visible-bars')){
+								}else{
+									// tap
+									if(!bars.hasClass('visible-bars')){
 							$this.showBars();
 							$this.setTimeout();
 						}else{
@@ -279,13 +277,13 @@
 							$this.hideBars();
 						}
 
-	       				}
+								}
 
-	       				$('.touching').off('touchmove').removeClass('touching');
+								$('.touching').off('touchmove').removeClass('touching');
 
 					});
 
-           				}
+									}
 			},
 
 			setTimeout: function(){
@@ -345,7 +343,7 @@
 				});
 
 				$('#swipebox-action').hover(function() {
-				  		$this.showBars();
+							$this.showBars();
 						bars.addClass('force-visible-bars');
 						$this.clearTimeout();
 
@@ -425,9 +423,9 @@
 					$('#swipebox-next').addClass('disabled');
 				}
 
-				if (plugin.settings.showCount) {
-					$('#swipebox-count').text((index+1) + '/' + elements.length)
-				};
+				if (plugin.settings.showCount){
+					$('#swipebox-count').text((index+1) + '/' + elements.length);
+				}
 			},
 
 			openSlide : function (index){
@@ -579,7 +577,7 @@
 				$.swipebox.isOpen = false;
 				if (plugin.settings.afterClose)
 					plugin.settings.afterClose();
- 			}
+			}
 
 		};
 

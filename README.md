@@ -60,6 +60,8 @@ I have modified source a bit from the 1.2.1 version:
 - svg image (if supported) now comes with a class change and not with a hardcoded filename change
 - option to show slide counter added via `showCount`
 
+Both of these are visible in my [PR on the Swipebox repo](https://github.com/brutaldesign/swipebox/pull/69).
+
 ## License
 
 [The MIT License](MIT-LICENSE)

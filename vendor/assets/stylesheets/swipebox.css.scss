@@ -69,7 +69,6 @@ html.swipebox {
   -moz-box-sizing: border-box;
 }
 
-
 #swipebox-slider .slide .swipebox-video-container .swipebox-video{
   width: 100%;
   height: 0;
@@ -116,7 +115,8 @@ html.swipebox {
   top: 0!important;
 }
 
-#swipebox-action #swipebox-prev, #swipebox-action #swipebox-next,
+#swipebox-action #swipebox-prev,
+#swipebox-action #swipebox-next,
 #swipebox-action #swipebox-close {
   background-image: asset-url('icons.png');
   background-repeat: no-repeat;
