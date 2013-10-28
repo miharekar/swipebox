@@ -35,10 +35,10 @@ Use a specific class for your links and use the title attribute as caption.
 <a href="big/image.jpg" class="swipebox" title="My Caption">
 ```
 
-Bind the swipebox behaviour on every link with the "swipebox" class.
+Bind the swipebox behaviour on every link with the 'swipebox' class.
 
 ```javascript
-$(".swipebox").swipebox();
+$('.swipebox').swipebox();
 ```
 
 ###Options
