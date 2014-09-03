@@ -1,21 +1,23 @@
-html.swipebox {
-  overflow: hidden!important;
-}
+/*! Swipebox v1.2.9 | Constantin Saguin csag.co | MIT License | github.com/brutaldesign/swipebox */
 
-#swipebox-overlay img {
-  border: none!important;
+html.swipebox-html.swipebox-touch {
+  overflow: hidden !important;
 }
 
 #swipebox-overlay {
+  img {
+    border: none !important;
+  }
   width: 100%;
   height: 100%;
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 99999!important;
+  z-index: 99999 !important;
   overflow: hidden;
   -webkit-user-select: none;
   -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
 }
 
@@ -27,61 +29,63 @@ html.swipebox {
   white-space: nowrap;
   position: absolute;
   display: none;
-}
-
-#swipebox-slider .slide {
-  background: asset-url('swipebox-loader.gif') no-repeat center center;
-  height: 100%;
-  width: 100%;
-  line-height: 1px;
-  text-align: center;
-  display: inline-block;
-}
-
-#swipebox-slider .slide:before {
-  content: "";
-  display: inline-block;
-  height: 50%;
-  width: 1px;
-  margin-right: -1px;
-}
-
-#swipebox-slider .slide img,
-#swipebox-slider .slide .swipebox-video-container {
-  display: inline-block;
-  max-height: 100%;
-  max-width: 100%;
-  margin: 0;
-  padding: 0;
-  width: auto;
-  height: auto;
-  vertical-align: middle;
-}
-
-#swipebox-slider .slide .swipebox-video-container {
-  background:none;
-  max-width: 1140px;
-  max-height: 100%;
-  width: 100%;
-  padding:5%;
-  box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-}
-
-#swipebox-slider .slide .swipebox-video-container .swipebox-video{
-  width: 100%;
-  height: 0;
-  padding-bottom: 56.25%;
-  overflow: hidden;
-  position: relative;
-}
-
-#swipebox-slider .slide .swipebox-video-container .swipebox-video iframe{
-  width: 100%!important;
-  height: 100%!important;
-  position: absolute;
-  top: 0; left: 0;
+  .slide {
+    background: asset-url('swipebox-loader.gif') no-repeat center center;
+    height: 100%;
+    width: 100%;
+    line-height: 1px;
+    text-align: center;
+    display: inline-block;
+    &:before {
+      content: "";
+      display: inline-block;
+      height: 50%;
+      width: 1px;
+      margin-right: -1px;
+    }
+    img {
+      display: inline-block;
+      max-height: 100%;
+      max-width: 100%;
+      margin: 0;
+      padding: 0;
+      width: auto;
+      height: auto;
+      vertical-align: middle;
+    }
+    .swipebox-video-container {
+      display: inline-block;
+      max-height: 100%;
+      max-width: 100%;
+      margin: 0;
+      padding: 0;
+      width: auto;
+      height: auto;
+      vertical-align: middle;
+      background: none;
+      max-width: 1140px;
+      max-height: 100%;
+      width: 100%;
+      padding: 5%;
+      box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      .swipebox-video {
+        width: 100%;
+        height: 0;
+        padding-bottom: 56.25%;
+        overflow: hidden;
+        position: relative;
+        iframe {
+          width: 100% !important;
+          height: 100% !important;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      }
+    }
+  }
 }
 
 #swipebox-action, #swipebox-caption {
@@ -94,100 +98,60 @@ html.swipebox {
 
 #swipebox-action {
   bottom: -50px;
-}
-#swipebox-action.visible-bars {
-  bottom: 0;
-}
-
-#swipebox-action.force-visible-bars {
-  bottom: 0!important;
+  &.visible-bars {
+    -ms-transform: translateY(-50px);
+    -webkit-transform: translateY(-50px);
+    transform: translateY(-50px);
+  }
+  #swipebox-prev, #swipebox-next, #swipebox-close {
+    background-image: asset-url('swipebox-icons.png');
+    background-repeat: no-repeat;
+    border: none !important;
+    text-decoration: none !important;
+    cursor: pointer;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 0;
+    &.svg {
+      background-image: asset-url('swipebox-icons.svg');
+    }
+  }
+  #swipebox-prev {
+    background-position: -32px 13px;
+    right: 100px;
+  }
+  #swipebox-next {
+    background-position: -78px 13px;
+    right: 40px;
+  }
+  #swipebox-close {
+    background-position: 15px 12px;
+    left: 40px;
+  }
+  #swipebox-prev.disabled, #swipebox-next.disabled {
+    opacity: 0.3;
+  }
 }
 
 #swipebox-caption {
   top: -50px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-}
-#swipebox-caption.visible-bars {
-  top: 0;
-}
-
-#swipebox-caption.force-visible-bars {
-  top: 0!important;
-}
-
-#swipebox-action #swipebox-prev,
-#swipebox-action #swipebox-next,
-#swipebox-action #swipebox-close {
-  background-image: asset-url('swipebox-icons.png');
-  background-repeat: no-repeat;
-  border: none!important;
-  text-decoration: none!important;
-  cursor: pointer;
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  top: 0;
-  &.svg {
-    background-image: asset-url('swipebox-icons.svg');
+  text-align: center;
+  &.visible-bars {
+    -ms-transform: translateY(50px);
+    -webkit-transform: translateY(50px);
+    transform: translateY(50px);
   }
 }
 
-#swipebox-action #swipebox-close {
-  background-position: 15px 12px;
-  left: 40px;
-}
-
-#swipebox-action #swipebox-prev {
-  background-position: -32px 13px;
-  right: 100px;
-}
-
-#swipebox-action #swipebox-next {
-  background-position: -78px 13px;
-  right: 40px;
-}
-
-#swipebox-action #swipebox-prev.disabled,
-#swipebox-action #swipebox-next.disabled {
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=30);
-  opacity: 0.3;
-}
-
-#swipebox-slider.rightSpring {
-  -moz-animation: rightSpring 0.3s;
-  -webkit-animation: rightSpring 0.3s;
-}
-
-#swipebox-slider.leftSpring {
-  -moz-animation: leftSpring 0.3s;
-  -webkit-animation: leftSpring 0.3s;
-}
-
-@-moz-keyframes rightSpring {
-  0% {
-    margin-left: 0px;
+#swipebox-slider {
+  &.rightSpring {
+    -webkit-animation: rightSpring 0.3s;
+    animation: rightSpring 0.3s;
   }
-
-  50% {
-    margin-left: -30px;
-  }
-
-  100% {
-    margin-left: 0px;
-  }
-}
-
-@-moz-keyframes leftSpring {
-  0% {
-    margin-left: 0px;
-  }
-
-  50% {
-    margin-left: 30px;
-  }
-
-  100% {
-    margin-left: 0px;
+  &.leftSpring {
+    -webkit-animation: leftSpring 0.3s;
+    animation: leftSpring 0.3s;
   }
 }
 
@@ -195,47 +159,71 @@ html.swipebox {
   0% {
     margin-left: 0px;
   }
-
   50% {
     margin-left: -30px;
   }
-
   100% {
     margin-left: 0px;
   }
 }
+
+
+@keyframes rightSpring {
+  0% {
+    margin-left: 0px;
+  }
+  50% {
+    margin-left: -30px;
+  }
+  100% {
+    margin-left: 0px;
+  }
+}
+
 
 @-webkit-keyframes leftSpring {
   0% {
     margin-left: 0px;
   }
-
   50% {
     margin-left: 30px;
   }
-
   100% {
     margin-left: 0px;
   }
 }
 
-@media screen and (max-width: 800px) {
-  #swipebox-action #swipebox-close {
-    left: 0;
-  }
 
-  #swipebox-action #swipebox-prev {
-    right: 60px;
+@keyframes leftSpring {
+  0% {
+    margin-left: 0px;
   }
-
-  #swipebox-action #swipebox-next {
-    right: 0;
+  50% {
+    margin-left: 30px;
+  }
+  100% {
+    margin-left: 0px;
   }
 }
 
 
+@media screen and (max-width: 800px) {
+  #swipebox-action {
+    #swipebox-close {
+      left: 0;
+    }
+    #swipebox-prev {
+      right: 60px;
+    }
+    #swipebox-next {
+      right: 0;
+    }
+  }
+}
+
 /* Skin
 --------------------------*/
+
 #swipebox-overlay {
   background: #0d0d0d;
 }
@@ -243,12 +231,10 @@ html.swipebox {
 #swipebox-action, #swipebox-caption {
   text-shadow: 1px 1px 1px black;
   background-color: #0d0d0d;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #0d0d0d), color-stop(100%, #000000));
-  background-image: -webkit-linear-gradient(#0d0d0d, #000000);
-  background-image: -moz-linear-gradient(#0d0d0d, #000000);
-  background-image: -o-linear-gradient(#0d0d0d, #000000);
-  background-image: linear-gradient(#0d0d0d, #000000);
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=95);
+  background-color: #0d0d0d;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#0d0d0d), to(black));
+  background-image: -webkit-linear-gradient(top, #0d0d0d, black);
+  background-image: linear-gradient(to bottom, #0d0d0d, black);
   opacity: 0.95;
 }
 
@@ -256,9 +242,9 @@ html.swipebox {
   border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-#swipebox-caption, #swipebox-count {
-  text-align: center;
-  color: white!important;
+#swipebox-caption {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  color: white !important;
   font-size: 15px;
   line-height: 43px;
   font-family: Helvetica, Arial, sans-serif;
