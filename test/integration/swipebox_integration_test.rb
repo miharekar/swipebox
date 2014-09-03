@@ -8,7 +8,7 @@ describe "swipebox integration" do
 
   it "provides swipebox.css on the asset pipeline" do
     visit '/assets/swipebox.css'
-    page.text.must_include '.swipebox {'
+    page.text.must_include 'html.swipebox-html.swipebox-touch {'
   end
 
   it "includes images from assets in the compiled css" do
