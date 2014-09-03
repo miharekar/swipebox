@@ -7,6 +7,7 @@ require 'swipebox/version'
 Gem::Specification.new do |s|
   s.name        = 'swipebox'
   s.version     = Swipebox::VERSION
+  s.licenses    = ['MIT']
   s.authors     = ['Miha Rekar']
   s.email       = ['info@mr.si']
   s.homepage    = 'https://github.com/mrfoto/swipebox'
@@ -19,6 +20,6 @@ Gem::Specification.new do |s|
   s.add_dependency 'rails', '>= 3.1', '< 5.0'
   s.add_dependency 'sass-rails', '>= 3.1', '< 5.0'
 
-  s.add_development_dependency 'minitest'
-  s.add_development_dependency 'capybara'
+  s.add_development_dependency 'minitest', '~> 5'
+  s.add_development_dependency 'capybara', '~> 2'
 end
