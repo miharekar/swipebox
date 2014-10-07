@@ -25,7 +25,7 @@ In your CSS manifest file:
 
 In your JavaScript manifest file:
 
-```js
+```javascript
 //= require swipebox
 ```
 
@@ -46,17 +46,18 @@ $('.swipebox').swipebox();
 ```javascript
 useCSS : true, // false will force the use of jQuery for animations
 initialIndexOnArray: 0, // which image index to init when a array is passed
-hideBarsOnMobile : true, // false will show the caption and navbar on mobile devices
-hideBarsDelay : 3000, // 0 to always show caption and action bar
+hideCloseButtonOnMobile : false, // true will hide the close button on mobile devices
+hideBarsDelay : 3000, // delay before hiding bars on desktop
 videoMaxWidth : 1140, // videos max width
 beforeOpen: function(){} , // called before opening
+afterOpen: null, // called after opening
 afterClose: function(){}, // called after closing
 loopAtEnd: false // true will return to the first image after the last image is reached
 ```
 
 Look at the original [Swipebox repo](https://github.com/brutaldesign/swipebox#usage) for more.
 
-I have modified source a bit from the 1.2.9 version:
+I have modified source a bit from the 1.3.0.1 version:
 - SCSS instead of CSS because we need the `asset-url` helpers
 - .png -> .svg via class not hardcoded image path
 
