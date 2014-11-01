@@ -1,9 +1,9 @@
 # Swipebox for Rails
 
-[![Gem Version](https://badge.fury.io/rb/swipebox.png)](http://badge.fury.io/rb/swipebox)
-[![Build Status](https://travis-ci.org/mrfoto/swipebox.png?branch=master)](https://travis-ci.org/mrfoto/swipebox)
-[![Code Climate](https://codeclimate.com/github/mrfoto/swipebox.png)](https://codeclimate.com/github/mrfoto/swipebox)
-[![Dependency Status](https://gemnasium.com/mrfoto/swipebox.png)](https://gemnasium.com/mrfoto/swipebox)
+[![Gem Version](http://img.shields.io/gem/v/swipebox.svg?style=flat-square)](http://rubygems.org/gems/swipebox)
+[![Build Status](http://img.shields.io/travis/mrfoto/swipebox.svg?style=flat-square)](https://travis-ci.org/mrfoto/swipebox)
+[![Code Climate](http://img.shields.io/codeclimate/github/mrfoto/swipebox.svg?style=flat-square)](https://codeclimate.com/github/mrfoto/swipebox)
+[![Dependency Status](http://img.shields.io/gemnasium/mrfoto/swipebox.svg?style=flat-square)](https://gemnasium.com/mrfoto/swipebox)
 
 [Swipebox | A touchable jQuery lightbox](http://brutaldesign.github.io/swipebox/) for the Rails asset pipeline
 
