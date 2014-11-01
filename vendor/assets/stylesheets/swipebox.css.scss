@@ -94,7 +94,7 @@ html.swipebox-html.swipebox-touch {
     }
   }
   .slide-loading {
-    background: asset-url('swipebox-loader.gif') no-repeat center center;
+    background: image-url('swipebox-loader.gif') no-repeat center center;
   }
 }
 
@@ -131,7 +131,7 @@ html.swipebox-html.swipebox-touch {
 }
 
 #swipebox-prev, #swipebox-next, #swipebox-close {
-  background-image: asset-url('swipebox-icons.png');
+  background-image: image-url('swipebox-icons.png');
   background-repeat: no-repeat;
   border: none !important;
   text-decoration: none !important;
@@ -140,7 +140,7 @@ html.swipebox-html.swipebox-touch {
   height: 50px;
   top: 0;
   &.svg {
-    background-image: asset-url('swipebox-icons.svg');
+    background-image: image-url('swipebox-icons.svg');
   }
 }
 

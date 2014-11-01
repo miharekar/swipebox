@@ -58,7 +58,7 @@ loopAtEnd: false // true will return to the first image after the last image is 
 Look at the original [Swipebox repo](https://github.com/brutaldesign/swipebox#usage) for more.
 
 I have modified source a bit from the 1.3.0.1 version:
-- SCSS instead of CSS because we need the `asset-url` helpers
+- SCSS instead of CSS because we need the `image-url` helpers
 - .png -> .svg via class not hardcoded image path
 
 ## License
