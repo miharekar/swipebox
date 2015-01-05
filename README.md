@@ -4,6 +4,7 @@
 [![Build Status](http://img.shields.io/travis/mrfoto/swipebox.svg?style=flat-square)](https://travis-ci.org/mrfoto/swipebox)
 [![Code Climate](http://img.shields.io/codeclimate/github/mrfoto/swipebox.svg?style=flat-square)](https://codeclimate.com/github/mrfoto/swipebox)
 [![Dependency Status](http://img.shields.io/gemnasium/mrfoto/swipebox.svg?style=flat-square)](https://gemnasium.com/mrfoto/swipebox)
+[![swipebox API Documentation](https://img.shields.io/badge/omniref-docs-da2b48.svg?style=flat-square)](https://www.omniref.com/ruby/gems/swipebox)
 
 [Swipebox | A touchable jQuery lightbox](http://brutaldesign.github.io/swipebox/) for the Rails asset pipeline
 
