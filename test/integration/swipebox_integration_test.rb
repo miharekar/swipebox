@@ -13,8 +13,8 @@ describe "swipebox integration" do
 
   it "includes images from assets in the compiled css" do
     visit '/assets/swipebox.css'
-    page.text.must_include '/assets/swipebox-icons.svg'
-    page.text.must_include '/assets/swipebox-icons.png'
-    page.text.must_include '/assets/swipebox-loader.gif'
+    page.text.must_match %r{/assets/swipebox-icons(?:-[\da-f]*)?\.svg}
+    page.text.must_match %r{/assets/swipebox-icons(?:-[\da-f]*)?\.png}
+    page.text.must_match %r{/assets/swipebox-loader(?:-[\da-f]*)?\.gif}
   end
 end
