@@ -2,5 +2,6 @@ language: ruby
 bundler_args: --without production
 sudo: false
 rvm:
-  - 2.2.5
-  - 2.3.1
+  - 2.2.6
+  - 2.3.3
+  - 2.4.1
